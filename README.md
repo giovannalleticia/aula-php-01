@@ -13,7 +13,6 @@ Para resolver os problemas de permissão nas pastas `public` e `scripts`, siga o
    ```bash
    docker-compose down --volumes --remove-orphans
    ```
-````
 
 2. **Crie as pastas manualmente**
    Crie as pastas `public` e `scripts` **antes de subir os contêineres**: podendo ser com o mouse em new folder normalmente ou no terminal com o comando:
