@@ -1,4 +1,3 @@
-````markdown
 # Solução para Problemas de Permissão em Docker e Ajustes no PHP Include
 
 Olá TADS24,
