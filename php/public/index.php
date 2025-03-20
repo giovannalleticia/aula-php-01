@@ -1,4 +1,5 @@
 <?php include '/var/www/scripts/controllers/resultado.php'; ?>
+<?php include '/var/www/scripts/database/config.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">

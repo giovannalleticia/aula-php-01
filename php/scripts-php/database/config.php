@@ -1,16 +1,17 @@
 <?php
 
-$HOST = 'localhost';
-$USER = 'root';
-$PASSWORD = 'root';
-$DB = "aula01";
-$PORT = 3306;
-$CHARSET = "utf8mb4";
+class DB {
+    private $HOST = 'localhost';
+    private $USER = 'root';
+    private $PASSWORD = 'root';
+    private $DB = "aula01";
+    private $PORT = 3306;
+    private $CHARSET = "utf8mb4";
+    private $conn;
 
-$conn = new mysqli($HOST, $USER, $PASSWORD, $DB, $PORT);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+    public function getConnection() {
+        $this->conn = new PDO("mysql:host=$this->HOST;dbname=$this->DB;charset=$this->CHARSET;port=$this->PORT", $this->USER, $this->PASSWORD);
+        return $this->conn;
+    }}
 
 ?>
