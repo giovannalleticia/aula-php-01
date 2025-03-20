@@ -1,8 +1,6 @@
 # Solução para Problemas da aula do dia 20/03
 
-Olá TADS24,
-
-Para resolver os problemas de de instalar o drive para comunciar com o banco
+Olá TADS24, para resolver os problemas de de instalar o drive para comunciar com o banco
 ---
 
 ## 🔧 Passos para Resolver Problemas do Banco
