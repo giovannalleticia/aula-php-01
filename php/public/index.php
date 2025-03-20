@@ -12,6 +12,13 @@
     <h1>Aula 2 PHP</h1>
 
 
+    <form action="index.php" method="post">
+        Nome: <input type="text" name="nome"><br>
+        Idade: <input type="number" name="idade"><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+
     <table>
         <tr>
         <th>Nome</th>
