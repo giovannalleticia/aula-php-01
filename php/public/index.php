@@ -1,4 +1,4 @@
-<?php include '/var/www/scripts/aula01.php'; ?>
+<?php include '/var/www/scripts/controllers/resultado.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
