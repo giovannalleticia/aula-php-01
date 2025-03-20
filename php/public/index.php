@@ -1,5 +1,5 @@
-<?php include '/var/www/scripts/controllers/resultado.php'; ?>
-<?php include '/var/www/scripts/database/config.php'; ?>
+<?php require_once '/var/www/scripts/controllers/resultado.php'; ?>
+<?php require_once '/var/www/scripts/database/config.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
