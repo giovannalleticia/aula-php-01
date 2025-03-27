@@ -1,5 +1,46 @@
-<?php require_once '/var/www/scripts/controllers/resultado.php'; ?>
-<?php require_once '/var/www/scripts/database/config.php'; ?>
+<?php
+
+class DB {
+    private $HOST = 'wagnerweinert.com.br';
+    private $USER = 'tads24_giovanna';
+    private $PASSWORD = 'tads24_giovanna';
+    private $DB = 'tads24_giovanna';
+    private $PORT = 3306;
+    private $CHARSET = "utf8mb4";
+    private $conn;
+
+    public function getConnection() {
+        $this->conn = new PDO("mysql:host=$this->HOST;dbname=$this->DB;charset=$this->CHARSET;port=$this->PORT", $this->USER, $this->PASSWORD);
+        return $this->conn;
+    }
+}
+
+$database = new DB();
+
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $nome = $_POST['nome'];
+    $idade = $_POST['idade'];
+
+    $conn = $database->getConnection();
+    $query = "INSERT INTO pessoa_php   (nome, idade) VALUES (?, ?)";
+
+    $stmt
+        = $conn->prepare($query);
+
+        $stmt->bindParam(1, $nome);
+        $stmt->bindParam(2, $idade);
+        $result = $stmt->execute();
+
+    echo $result;
+}
+
+
+$pessoas = [
+    ['nome' => 'Alice', 'idade' => 30],
+];
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">

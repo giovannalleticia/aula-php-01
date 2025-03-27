@@ -25,16 +25,18 @@ services:
     networks:
       - php-network
 
-  # phpmyadmin:
-  #   image: phpmyadmin/phpmyadmin
-  #   ports:
-  #     - "8081:80"
-  #   environment:
-  #     PMA_HOST: mysql
-  #   depends_on:
-  #     - mysql
-  #   networks:
-  #     - php-network
+
+
+   phpmyadmin:
+     image: phpmyadmin/phpmyadmin
+     ports:
+       - "8081:80"
+     environment:
+       PMA_HOST: mysql
+     depends_on:
+       - mysql
+     networks:
+       - php-network
 
 volumes:
   mysql-data:
